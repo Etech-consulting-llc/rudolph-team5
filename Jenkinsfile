@@ -3,8 +3,7 @@ pipeline{
 	stages{
 		stage('1-clone'){
 			steps{
-				sh 'lscpu'
-				sh 'whoami'
+				checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'rnfor', url: 'https://github.com/Etech-consulting-llc/rudolph-team5.git']])
 			}
 		}
 		stage('2-systemcheck'){
