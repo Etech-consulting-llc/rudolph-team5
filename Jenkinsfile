@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('1-clone'){
 			steps{
-				checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'rnfor', url: 'https://github.com/Etech-consulting-llc/rudolph-team5.git']])
+				checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'mySecrets', url: 'https://github.com/Etech-consulting-llc/rudolph-team5.git']]))
 			}
 		}
 		stage('2-systemcheck'){
