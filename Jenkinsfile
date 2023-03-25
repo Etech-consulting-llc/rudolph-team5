@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage('2-systemcheck'){
 			steps{
-                sh 'logname'
+                sh 'ls -a'
 			}
 		}
         stage('3-diskcheck'){
