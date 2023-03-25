@@ -8,8 +8,7 @@ pipeline{
 		}
 		stage('2-systemcheck'){
 			steps{
-				sh 'sudo systemctl status jenkins'
-				sh 'logname'
+                sh 'logname'
 			}
 		}
         stage('3-diskcheck'){
@@ -17,7 +16,7 @@ pipeline{
 				sh 'df -h'
 			}
 		}
-		stage('4-another operation'){
+		stage('4-another-operation'){
 			steps{
 				sh 'lsblk'
 			}
